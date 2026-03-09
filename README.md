@@ -96,8 +96,8 @@ public static void main(String[] args){
                            for(String lemma:aa){
                                int initial=lemma.charAt(0);
 
-                               if(Character.isLowerCase(initial)!=Character.toLowerCase(letter)){
-                                   letter=initial;
+                               if(Character.toLowerCase(initial) != Character.toLowerCase(letter)){
+                                   letter= initial;
                                    asftex.write("\n\\vspace{14pt}\n\\noindent\\textbf{\\Large %s}" +Character.toUpperCase(initial)+"}\\\\*[+12pt]\n");
                            }
                                asftex.write((lemma));
@@ -125,3 +125,4 @@ public static void main(String[] args){
         }
 
 }
+
